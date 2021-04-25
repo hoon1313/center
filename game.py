@@ -17,7 +17,7 @@ print(name1,"님의 정보를 보시겠습니까? [Y/N] ")
 user = str(input(">> "))
 
 #정보확인에 Y를 쳤을 때
-if user == "Y":
+if user == "Y": 
     print("정보를 읽은 후, 게임을 시작합니다." ) 
     print(id,"\n")
 
