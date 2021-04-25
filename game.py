@@ -19,7 +19,7 @@ user = str(input(">> "))
 #정보확인에 Y를 쳤을 때
 if user == "Y": 
     print("정보를 읽은 후, 게임을 시작합니다." ) 
-    print(id,"\n")
+    print(id,"\n") 
 
 #게임시작 & 금액충전
 print("업비트 접속 완료.")
