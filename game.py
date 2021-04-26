@@ -5,7 +5,7 @@ def sonsil(a,b):
     result = int(a)+int(b)
     return result   
 
-#수면매수용 리스트 작성 & 글자길이순으로 정렬
+#수면매수용 코인리스트 작성 & 글자길이순으로 정렬
 su = ['리플(0)','리스크(1)','메디블록(2)','온톨로지(3)','비트토렌트(4)','스트라이크(5)','베이직어텐션토큰(6)']
 su.sort(key=len)
 
@@ -17,7 +17,7 @@ id = {'이름': name1 , '전화번호':'010-0000-1111', '생년월일': '1999.01
 print(name1,"님 반갑습니다!")
 print(name1,"님의 정보를 보시겠습니까? [Y/N] ") 
 
-#유저 정보확인 예스 올 노
+#유저 정보확인 예스
 user = str(input(">> "))
 
 #정보확인에 Y를 쳤을 때
@@ -31,14 +31,14 @@ print("얼마를 충전하시겠습니까? ")
 money = int(input("충전금액 : "))
 print(money,"원이 충전되었습니다.\n")
 
-#도지코인 샀을때와 비트코인 샀을때 가격 상승하락
-doge = int(money*1.4)
-bitcoin = int(money*0.7)
-
 #충전된 돈으로 코인구매과정
 print("충전된 돈",money,"원으로 어떤코인을 구매할까요?")
 print("1.도지코인 2.비트코인 3.수면매수 ")
 num = int(input("선택 : "))
+
+#도지코인 샀을때와 비트코인 샀을때 가격 상승하락
+doge = int(money*1.4)
+bitcoin = int(money*0.7)
 
 #어떤코인을 구매했는가
 if(num==1):
@@ -62,6 +62,7 @@ if(num==3):
         import random
         print(random.choice(su),"코인이(가) 랜덤으로 구매되었습니다. 건승을 빕니다.")
    
+    ## 코인은 무조건 잃기마련... 끊을 수 없는 도박의 맛 ...
     num1 = int(input("예상 손해 퍼센트[1] : "))
     num2 = int(input("예상 손해 퍼센트[2] : "))
     print("업비트에서",sonsil(num1,num2),"%의 손실알림이 도착했습니다.")
@@ -71,7 +72,8 @@ if(num==3):
     num3 = money * (1 - (num1+num2)/ 100)
 
     print("잔고 :", int(num3))
-print("게임을 종료합니다.")
+
+print("매매를 종료합니다.")
 
 
 
